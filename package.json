@@ -1,0 +1,27 @@
+{
+  "name": "set-default-value",
+  "version": "0.0.1",
+  "description": "If value is null or undefined, it sets a default value instead.",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "keywords": [
+    "default",
+    "defaultvalue",
+    "null",
+    "undefined",
+    "fallback"
+  ],
+  "author": "Ansgar Sachs",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babel-eslint": "^4.1.3",
+    "browserify": "^11.2.0",
+    "eslint": "^1.5.1",
+    "istanbul": "^0.3.21",
+    "jsdoc": "^3.3.3",
+    "mocha": "^2.3.3"
+  }
+}
