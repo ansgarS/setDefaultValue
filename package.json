@@ -13,7 +13,14 @@
     "undefined",
     "fallback"
   ],
-  "author": "Ansgar Sachs",
+  "author": {
+    "name": "Ansgar Sachs",
+    "email": "ansgar.sachs@teeage-beatz.de"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ansgarS/setDefaultValue.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "babel": "^5.8.23",
