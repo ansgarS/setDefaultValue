@@ -23,13 +23,13 @@ console.log(defaults("hi").to("default")); // "hi"
 
 ## API
 
-````
+```js
 typedef Options = {
     checkNull:      Bool,
     checkUndefined: Bool
 };
 
 defaults(<Any>, <Options?>).to(<Any>)
-````
+```
 
 It checks for null and undefined by default.
