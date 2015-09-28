@@ -2,6 +2,12 @@
 
 Sets a Default-Value, if null or undefined is given
 
+## Installation
+
+```js
+npm i set-default-value
+```
+
 ## Usage
 
 easily set default values for any variable
