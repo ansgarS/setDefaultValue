@@ -1,6 +1,10 @@
 import assert from "assert";
 import defaults from "../index";
 
+/*eslint-disable*/
+const UNDEFINED = undefined;
+/*eslint-enable*/
+
 describe("SetDefault", function() {
     it("creates a default-object with null", function() {
         const obj = defaults(null);
@@ -13,29 +17,26 @@ describe("SetDefault", function() {
 
 
     it("creates a default-object without checking for it", function() {
-        /*eslint-disable*/
         const obj1 = defaults(null, {
             checkNull: false
         });
 
         assert.equal(obj1.to(1), null);
 
-        const obj2 = defaults(undefined, {
+        const obj2 = defaults(UNDEFINED, {
             checkUndefined: false
         });
 
-        assert.equal(obj2.to(1), undefined);
+        assert.equal(obj2.to(1), UNDEFINED);
     });
 
     it("creates a default-object with undefined", function() {
+        const obj = defaults(UNDEFINED);
 
-        const obj = defaults(undefined);
-
-        assert(obj.value === undefined);
+        assert(obj.value === UNDEFINED);
         assert(obj.checkUndefined === true);
 
         assert.equal(obj.to(2), 2);
-        /*eslint-enable*/
     });
 
     it("creates a default-object with a value\\null|undefined", function() {

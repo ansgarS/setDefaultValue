@@ -1,4 +1,4 @@
-class defaults {
+class Defaults {
     constructor(value, options = {}) {
         this.value          = value;
         this.checkNull      = typeof options.checkNull === "undefined" ? true : options.checkNull;
@@ -12,9 +12,11 @@ class defaults {
      * @return {*}
      */
     to(defaultValue) {
-        return (this.checkNull && this.value === null) ||
-            (this.checkUndefined && typeof this.value === "undefined") ? defaultValue : this.value;
+        return (
+            (this.checkNull && this.value === null) ||
+            (this.checkUndefined && typeof this.value === "undefined") ? defaultValue : this.value
+        );
     }
 }
 
-export default (...args) => Object.freeze(new defaults(...args));
+export default (...args) => Object.freeze(new Defaults(...args));
