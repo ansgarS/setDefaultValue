@@ -1,35 +1,35 @@
 # setDefaultValue
+
 Sets a Default-Value, if null or undefined is given
 
-## API
+## Usage
 
-```js
-defaults(<Any>, options?).to(<Any>)
+easily set default values for any variable
 
-options = {
-    checkNull:      Boolean,
-    checkUndefined: Boolean
-};
-```
-It checks for null and undefined by default.
-
-## Example
-
-Replaces null-values
 ```js
 import defaults from "set-default-value";
 
-const value = defaults(null).to(5);
-
-console.log(value) // 5
+console.log(defaults(null).to(5)); // 5
+console.log(defaults(10).to(5)); // 10
 ```
 
 Replaces undefined
 ```js
 import defaults from "set-default-value";
 
-const value = defaults(undefined).to(5);
-
-console.log(value) // 5
+console.log(defaults(undefined).to(5)); // 5
+console.log(defaults("hi").to("default")); // "hi"
 ```
 
+## API
+
+````
+typedef Options = {
+    checkNull:      Bool,
+    checkUndefined: Bool
+};
+
+defaults(<Any>, <Options?>).to(<Any>)
+````
+
+It checks for null and undefined by default.
