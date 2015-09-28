@@ -1,8 +1,8 @@
 class defaults {
     constructor(value, options = {}) {
         this.value          = value;
-        this.checkNull      = options.checkNull || false;
-        this.checkUndefined = options.checkUndefined || false;
+        this.checkNull      = typeof options.checkNull === "undefined" ? true : options.checkNull;
+        this.checkUndefined = typeof options.checkUndefined === "undefined" ? true : options.checkUndefined;
     }
 
     /**
